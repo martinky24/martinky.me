@@ -1,0 +1,24 @@
+{
+  "name": "martinky.me",
+  "version": "1.0.0",
+  "description": "Kyle's personal site",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinky24/martinky.me.git"
+  },
+  "author": "Kyle Martin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinky24/martinky.me/issues"
+  },
+  "homepage": "https://github.com/martinky24/martinky.me#readme"
+}
