@@ -1,2 +1,2 @@
-# <martinky.me>
+# (martinky.me)[http://www.martinky.me]
 Personal site
