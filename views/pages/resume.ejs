@@ -1,0 +1,173 @@
+<!-- views/pages/resume.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kyle's Resume</title>
+    <%- include ('../partials/head') %>
+
+    <style type="text/css">
+    main {
+        background-color: White;
+    }
+
+    .container {
+        width: 900px; 
+    }
+
+    #Name {
+        font-size: 72px;
+    }
+
+    .subItem {
+        font-size: 20px;
+    }
+
+    .subsubItem {
+        font-size: 18px;
+    }
+
+    .icon {
+        width: 19px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    a:link, a:visited, a:hover, a:active {
+        color: black;
+    }
+
+    .headerItem {
+        padding-top: 30px;
+        font-size: 44px;
+    }
+
+    .contentItem {
+        font-size: 14px;
+    }
+
+    .secondary{
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    .righta {
+        text-align: right;
+    }
+
+    </style>
+</head>
+
+
+<body class="container">
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col" style="padding-left: 0px">
+                <h1 id="Name">Kyle Martin</h1>
+            </div>
+            <!-- icons https://www.flaticon.com/packs/multimedia-collection -->
+            <div class="col">
+                <h5 class="h5 subItem righta"><a href="mailto:martinky24@gmail.com">martinky24@gmail.com</a><img class="icon" src="icons/mail.svg"><h5>
+                <h5 class="h5 subItem righta"><a href="tel:301-448-6718">301-448-6718</a><img class="icon" src="icons/phone.svg"></h5>
+                <h5 class="h5 subItem righta"><a href="http://martinky.me">martinky.me</a><img class="icon" src="icons/monitor.svg"></h5>
+                <h5 class="h5 subItem righta"><a href="https://goo.gl/maps/qXaryeRDs7naJjPJ7">Tucson, AZ</a><img class="icon" src="icons/pin.svg"></h5>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <h1 class="headerItem">Education</h1>
+        <div>
+            <a class="h4" href="https://oregonstate.edu/">Oregon State University</a>
+            <span class="text-muted secondary">Corvallis, OR</span>
+
+            <div><span class="subItem">Bachelor of Science in Computer Science</span> <span class="text-muted">3.8/4.0</span></div>
+            <ul>
+                <li class="subsubItem">Noteable coursework on topics including algorithm design and analysis, data structures, computer networking, cryptography, parallel programming, computer architecture, web development, databases, etc...</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 30px">
+            <a class="h4" href="https://cnu.edu/">Christopher Newport University</a>
+            <span class="text-muted secondary">Newport News, VA</span>
+
+            <div><span class="subItem">Bachelor of Science in Mathematics</span> <span class="text-muted">3.5/4.0</span></div>
+            <ul>
+                <li class="subsubItem">Presented with departmental award at graduation for being an involved and committed student of mathematics</li>
+                <li class="subsubItem">Selected for President’s Leadership Program, competitive scholarship and service program based on academics and leadership skills</li>
+                <li class="subsubItem">Noteable coursework on topics linear algebra, probability and statistics, operations research, modern algebra, real analysis, complex analysis, etc...</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div>
+        <h1 class="headerItem">Work Experience</h1>
+        <div>
+            <a class="h4" href="https://wolfram.com/">Wolfram Research, Inc.</a>
+            <span class="text-muted secondary">Champaign, IL</span>
+
+            <div><span class="subItem">Quality Assurance Engineer</span> <span class="text-muted">2018 - Present</span></div>
+            <ul>
+                <li class="subsubItem">Maintain and enhance automated, functional and performance tests for visualization, system interfacing, and cryptography functionality in Mathematica and the Wolfram Language.</li>
+                <li class="subsubItem">Track and report numerous bugs, including root cause analysis when possible, and suggesting fixes where appropriate.</li>
+                <li class="subsubItem">Active participant in code reviews of new features, bug fixes, tests, and test tools.</li>
+            </ul>
+
+            <div style="margin-top: 20px"><span class="subItem">Team Lead</span> <span class="text-muted">2017 - 2018</span></div>
+            <ul>
+                <li class="subsubItem">Managed group of 4-6 engineers, ensuring they had the resources to achieve their objectives and provided guidance
+through tough customer scenarios and/or technical problems</li>
+                <li class="subsubItem">Presented in weekly meetings with higher level managers to discuss team’s progress</li>
+                <li class="subsubItem">Spent remaining time maintaining the duties of a Wolfram Technology Engineer (below)</li>
+            </ul>
+
+            <div style="margin-top: 20px"><span class="subItem">Wolfram Technology Engineer</span> <span class="text-muted">2015 - 2017</span></div>
+            <ul>
+                <li class="subsubItem">Provided consulting for customers on effective and efficient use of the Wolfram Language and Wolfram products</li>
+                <li class="subsubItem">Demonstrated problem solving skills in a wide variety of fields inlcuding mathematics, programming and engineering</li>
+                <li class="subsubItem">Processed customer bug reports, including reproducing, minimizing, and reporting the bug</li>
+                <li class="subsubItem">Assist in organizing and managing software prerelease programs for both desktop and mobile environments</li>
+            </ul>
+        </div>
+
+        <div>
+            <a class="h4" href="https://cnu.edu/" style="margin-top: 30px">Christopher Newport University</a>
+            <span class="text-muted secondary">Newport News, VA</span>
+
+            <div><span class="subItem">Undergraduate Research in Factorization and Primality Testing and Optimization</span> <span class="text-muted">2014-2015</span></div>
+            <ul>
+                <li class="subsubItem">Focused on the abstraction and algorithmic aspects of problem solving in algebraic contexts</li>
+                <li class="subsubItem">Explored factorization and primality testing algorithms and their implementation using Mathematica</li>
+                <li class="subsubItem">Studied under Dr. Matthew Comer</li>
+            </ul>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="headerItem">Skills</h1>
+        <!-- ToString /@ {items}; StringRiffle[Sort@#, ", "] -->
+        <div class="subItem">Technologies I have built things with:</div>
+        <div class="subsubItem" style="margin: 10px 30px">Bash, C, C++, CSS, CUDA, Eclipse, EJS, Git, HTML, Javascript, JSON, Linux, macOS, Mathematica, MongoDB, Node.js, OpenCL, OpenMP, OpenSSL, Python, SQL, Sublime, Windows, Wolfram Language</div>
+
+        <div class="subItem">Soft skills:</div>
+        <ul>
+            <li class="subsubItem">Problem solving</li>
+            <li class="subsubItem">Multitasking</li>
+            <li class="subsubItem">Rapidly learning new topics/technologies</li>
+            <li class="subsubItem">Effective communication, both technical and non-technical</li>
+        </ul>
+    </div>
+</main>
+
+<footer>
+    <%# include ('../partials/footer') %>
+</footer>
+
+</body>
+</html>
