@@ -25,7 +25,7 @@ app.use('/public',  express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
     var content = [];
 
-    res.render('pages/resume', content);
+    res.redirect('resume');
 });
 
 app.get('/resume', function(req, res) {
@@ -54,9 +54,6 @@ app.use(function (err, req, res, next) {
 /******************
  * Launch communication
  ******************/
-
-// app.listen(8080);
-// console.log('http://localhost:8080/');
 
 const port = process.env.PORT || 3000;
 app.listen(port);
