@@ -1,0 +1,39 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Martinky Dot Me</title>
+    <%- include ('../partials/head') %>
+</head>
+<body class="container" style="max-width:60%">
+
+<header>
+    <%- include ('../partials/header') %>
+</header>
+
+<main>
+        <div class="subtitle">Personal</div>
+
+		<img src="resources/me2.jpeg" class="rounded" align="right" alt="dog" width="200px">
+
+        <p>I moved to Tucson, Arizona in 2020 from the Chicago area, after growing up in the DMV. My move to Tucson was prompted by a desire escape colder weather and explore a part of the country I had not yet spent any time in. I am a big fan of the diversity, culture, and endless outdoor opportunities here in Tucson.
+        <br><br>
+		I am an avid runner and I have ran a handful of marathons, including Chicago 2019. Since moving to Arizona I have been getting more into mountain biking as well (follow me on <a href="https://www.strava.com/athletes/20473650">Strava</a>!). Most days I unwind by spending some time at local dog parks with my dog <a href="resources/louie.jpeg">Louie</a>. In 2021 I am looking to get involved with volunteer work focused on trail maintenance in the greater Tucson area. 
+		</p>
+
+
+        <div class="subtitle">Professional</div>
+
+		<p>I am presently a Quality Assurance Engineer for Wolfram Research, Inc., working to ensure that <a href="https://www.wolfram.com/mathematica/">Mathematica</a> (a programming language primarily used in scientific computing and research) produces correct and performant results. I am the lead tester for the core language (essentially what other languages call their standard library), cryptography, mathematical visualization and system interfacing functionality in the program. All in all I personally oversee and maintain over 100k regression tests. I also focus on fault isolation, researching potential bug fixes, and extending coverage of existing tests.
+		<br><br>
+		I have degrees in mathematics and computer science. My personal interests lean toward enjoy exploring methods in scientific computing (particularly cryptography, numerical analysis, among others) and learning new programming languages. As one can probably tell by this website, I tend to prefer back-end to front-end development. </p>
+
+</main>
+
+<footer>
+    <%- include ('../partials/footer') %>
+</footer>
+
+</body>
+</html>

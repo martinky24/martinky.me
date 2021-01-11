@@ -25,13 +25,19 @@ app.use('/public',  express.static(__dirname + '/public'));
 app.get('/', function(req, res) {
     var content = [];
 
-    res.redirect('resume');
+    res.render('pages/index', content);
 });
 
 app.get('/resume', function(req, res) {
     var content = [];
 
     res.render('pages/resume', content);
+});
+
+app.get('/about', function(req, res) {
+    var content = [];
+
+    res.render('pages/about', content);
 });
 
 /******************
