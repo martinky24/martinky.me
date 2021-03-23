@@ -8,6 +8,11 @@ body {
 	font-size: 24px;
 }
 
+.about {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+}
+
 .subnav {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 16px;
