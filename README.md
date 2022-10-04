@@ -10,5 +10,5 @@ Personal site
 TODO (?):
 
 - SSL
-- custom error page integration
-- 
+- Custom error page integration
+- Something cool?
