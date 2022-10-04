@@ -1,0 +1,34 @@
+{{define "/about.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Martinky Dot Me</title>
+    {{template "head"}}
+</head>
+<body class="container" style="max-width:70%">
+
+<header>
+    {{template "header"}}
+</header>
+
+<main>
+        <div class="subtitle">Personal</div>
+
+		<img src="static/resources/me2.jpeg" class="rounded" align="right" alt="dog" width="200px" style="margin: 8px">
+
+        <p>After growing up in the Washington DC suburbs I've moved around a bit, living in the Chicago area, Tucson, and now Denver.
+        <br><br>
+		I am an avid runner and I have ran a handful of marathons, including Chicago 2019. I am an avid mountain biker as well (follow me on <a href="https://www.strava.com/athletes/20473650">Strava</a>!). Most days I unwind by spending some time at local dog parks with my dog <a href="static/resources/louie.jpeg">Louie</a>.
+		</p>
+
+
+        <div class="subtitle">Professional</div>
+
+		I am presently a software developer at <a href="https://rebelliondefense.com/">Rebellion Defense</a>. I have degrees in mathematics (<a href="https://cnu.edu/">CNU</a>) and computer science (<a href="https://oregonstate.edu/">OSU</a>). My personal interests lean toward exploring methods in scientific computing (particularly cryptography, numerical analysis, among other topics) and learning new programming languages. Previously I've worked at <a href="https://www.wolfram.com/">Wolfram Research</a>, helping build the scientific computing software <a href="https://www.wolfram.com/mathematica/">Mathematica</a>, and <a href="https://www.geost.com/">GEOST</a>, working on high-powered telescopes and optical systems to keep track of artificial satellites in earth's orbit.</p>
+</main>
+
+{{template "footer"}}
+
+</body>
+</html>
+{{end}}

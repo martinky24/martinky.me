@@ -1,11 +1,10 @@
-<!-- views/pages/resume.ejs -->
-
+{{define "/resume.html"}}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Kyle's Resume</title>
-    <%- include ('../partials/head') %>
+    {{template "head"}}
 
     <style type="text/css">
     main {
@@ -71,12 +70,12 @@
             </div>
             <!-- icons https://www.flaticon.com/packs/multimedia-collection -->
             <div class="col-4">
-                <h5 class="h5 subItem righta"><a href="mailto:martinky24@gmail.com">martinky24@gmail.com<img class="icon" src="icons/mail.svg"></a><h5>
-                <h5 class="h5 subItem righta"><a href="tel:301-448-6718">301-448-6718<img class="icon" src="icons/phone.svg"></a></h5>
-                <h5 class="h5 subItem righta"><a href="http://martinky.me">martinky.me<img class="icon" src="icons/monitor.svg"></a></h5>
-                <h5 class="h5 subItem righta"><a href="https://goo.gl/maps/qXaryeRDs7naJjPJ7">Tucson, AZ<img class="icon" src="icons/pin.svg"></a></h5>
-                <h5 class="h5 subItem righta"><a href="https://github.com/martinky24">martinky24<img class="icon" src="icons/github.svg"></a></h5>
-                <!--<h5 class="h5 subItem righta"><a href="https://mathematica.stackexchange.com/users/34161/ktm">ktm<img class="icon" src="icons/so.svg"></a></h5>-->
+                <h5 class="h5 subItem righta"><a href="mailto:martinky24@gmail.com">martinky24@gmail.com<img class="icon" src="static/icons/mail.svg"></a><h5>
+                <h5 class="h5 subItem righta"><a href="tel:301-448-6718">301-448-6718<img class="icon" src="static/icons/phone.svg"></a></h5>
+                <h5 class="h5 subItem righta"><a href="http://martinky.me">martinky.me<img class="icon" src="static/icons/monitor.svg"></a></h5>
+                <h5 class="h5 subItem righta"><a href="https://goo.gl/maps/qXaryeRDs7naJjPJ7">Tucson, AZ<img class="icon" src="static/icons/pin.svg"></a></h5>
+                <h5 class="h5 subItem righta"><a href="https://github.com/martinky24">martinky24<img class="icon" src="static/icons/github.svg"></a></h5>
+                <!-- <h5 class="h5 subItem righta"><a href="https://mathematica.stackexchange.com/users/34161/ktm">ktm<img class="icon" src="static/icons/so.svg"></a></h5> -->
             </div>
         </div>
     </div>
@@ -90,7 +89,7 @@
             <ul>
                 <li class="subsubItem">Developed complex computational systems on a primarily Go/Python based stack</li>
                 <li class="subsubItem">Used modern, cloud-based tooling including AWS, RabbitMQ, gRPC</li>
-                <li class="subsubItem">Designed and implemented best practices to maximize both horizontal and veritcal resources across the compute stack</li>
+                <li class="subsubItem">Designed and implemented best practices to maximize both horizontal and vertical resources across the compute stack</li>
             </ul>
 
             <a class="h4" href="https://geost.com/">GEOST</a>
@@ -162,9 +161,8 @@
     </div>
 </main>
 
-<footer>
-    <%# include ('../partials/footer') %>
-</footer>
+{{template "footer"}}
 
 </body>
 </html>
+{{end}}

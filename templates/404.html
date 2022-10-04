@@ -1,10 +1,9 @@
-<!-- views/pages/index.ejs -->
-
+{{define "404"}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>404</title>
-    <%- include ('partials/head') %>
+    {{template "head"}}
 </head>
 
 <body>
@@ -15,3 +14,4 @@
 
 </body>
 </html>
+{{end}}
