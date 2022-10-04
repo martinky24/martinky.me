@@ -15,8 +15,14 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 	http.HandleFunc("/", serveTemplate)
 
-	log.Print("Listening on :8090...")
-	err := http.ListenAndServe(":8090", nil)
+	port := os.Getenv("PORT")
+	if port == "" {
+		fmt.Println("Using app's default port of 8090")
+		port = "8090"
+	}
+
+	fmt.Println("localhost:" + port)
+	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
