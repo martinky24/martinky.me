@@ -1,5 +1,11 @@
 # [martinky.me](http://www.martinky.me)
 
+Run with
+
+```sh
+go run server.go
+```
+
 Personal site
 
 - Go backend
