@@ -8,13 +8,12 @@ go run server.go
 
 Personal site
 
-- Go backend
-- Heroku hosting
+- Go backend, deployed via Docker image
+- Fly.io hosting
 - _Very basic !_
 - _Not meant to be a representation of my coding skills !_
 
 TODO (?):
 
-- SSL
 - Custom error page integration
 - Something cool?

@@ -15,7 +15,7 @@ func main() {
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 	http.HandleFunc("/", serveTemplate)
 
-	port := os.Getenv("PORT")
+	port := os.Getenv("MARTINKY_ME_PORT")
 	if port == "" {
 		fmt.Println("Using app's default port of 8090")
 		port = "8090"
