@@ -16,4 +16,5 @@ Personal site
 TODO (?):
 
 - Custom error page integration
+- Dark mode for static site integration? Could be fun to implement, not required by any means.
 - Something cool?
