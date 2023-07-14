@@ -1,9 +1,15 @@
 # [martinky.me](http://www.martinky.me)
 
-Run with
+Run locally with:
 
 ```sh
 go run server.go
+```
+
+To deploy (personal note):
+
+```sh
+fly deploy
 ```
 
 Personal site
