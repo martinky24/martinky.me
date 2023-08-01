@@ -21,7 +21,7 @@ func main() {
 		port = "8090"
 	}
 
-	fmt.Println("localhost:" + port)
+	fmt.Println("http://localhost:" + port)
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
 		log.Fatal(err)
