@@ -1,2 +1,8 @@
 .git
 .vscode
+.github
+*.md
+.DS_Store
+.gitignore
+fly.toml
+Makefile
