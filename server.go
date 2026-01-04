@@ -41,10 +41,8 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
 	// Return a 404 if the template doesn't exist
 	info, err := os.Stat(fp)
 	if err != nil {
-		if os.IsNotExist(err) {
-			http.NotFound(w, r)
-			return
-		}
+		http.NotFound(w, r)
+		return
 	}
 
 	// Return a 404 if the request is for a directory
