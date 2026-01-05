@@ -3,6 +3,12 @@
 Run locally with:
 
 ```sh
+docker compose up --build
+```
+
+or
+
+```sh
 go run server.go
 ```
 
@@ -23,4 +29,3 @@ TODO (?):
 
 - Custom error page integration
 - Dark mode for static site integration? Could be fun to implement, not required by any means.
-- Something cool?
