@@ -1,9 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"html/template"
-	"log"
+	"log/slog"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -17,19 +16,20 @@ func main() {
 
 	port := os.Getenv("MARTINKY_ME_PORT")
 	if port == "" {
-		fmt.Println("Using app's default port of 8090")
+		slog.Info("using default port", "port", "8090")
 		port = "8090"
 	}
 
-	fmt.Println("http://localhost:" + port)
+	slog.Info("server starting", "port", port, "url", "http://localhost:"+port)
 	err := http.ListenAndServe(":"+port, nil)
 	if err != nil {
-		log.Fatal(err)
+		slog.Error("server error", "error", err)
+		os.Exit(1)
 	}
 }
 
 func serveTemplate(w http.ResponseWriter, r *http.Request) {
-	fmt.Println(r.URL.Path)
+	slog.Info("request", "method", r.Method, "path", r.URL.Path, "remote", r.RemoteAddr)
 	path := checkExt(r.URL.Path)
 	if r.URL.Path == "/" {
 		path = "/index.html"
@@ -53,7 +53,7 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
 
 	tmpl, err := template.ParseFiles(fp, partials)
 	if err != nil {
-		fmt.Print(err.Error())
+		slog.Error("template parse error", "error", err, "path", fp)
 		// Return a generic "Internal Server Error" message
 		http.Error(w, http.StatusText(500), 500)
 		return
@@ -61,7 +61,7 @@ func serveTemplate(w http.ResponseWriter, r *http.Request) {
 
 	err = tmpl.ExecuteTemplate(w, path, nil)
 	if err != nil {
-		fmt.Print(err.Error())
+		slog.Error("template execute error", "error", err, "path", path)
 		// Return a generic "Internal Server Error" message
 		http.Error(w, http.StatusText(500), 500)
 	}
