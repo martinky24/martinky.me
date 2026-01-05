@@ -10,9 +10,15 @@ import (
 )
 
 func main() {
+	// Static files with security headers
 	fs := http.FileServer(http.Dir("./static"))
-	http.Handle("/static/", http.StripPrefix("/static/", fs))
-	http.HandleFunc("/", serveTemplate)
+	http.Handle("/static/", securityHeaders(http.StripPrefix("/static/", fs)))
+
+	// Health check endpoint
+	http.HandleFunc("/health", healthHandler)
+
+	// Template routes with security headers
+	http.HandleFunc("/", securityHeaders(http.HandlerFunc(serveTemplate)).ServeHTTP)
 
 	port := os.Getenv("MARTINKY_ME_PORT")
 	if port == "" {
@@ -26,6 +32,30 @@ func main() {
 		slog.Error("server error", "error", err)
 		os.Exit(1)
 	}
+}
+
+// securityHeaders adds security headers to all responses
+func securityHeaders(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		// Prevent clickjacking
+		w.Header().Set("X-Frame-Options", "DENY")
+		// Prevent MIME type sniffing
+		w.Header().Set("X-Content-Type-Options", "nosniff")
+		// Enable browser XSS protection
+		w.Header().Set("X-XSS-Protection", "1; mode=block")
+		// Content Security Policy
+		w.Header().Set("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;")
+		// Referrer policy
+		w.Header().Set("Referrer-Policy", "strict-origin-when-cross-origin")
+
+		next.ServeHTTP(w, r)
+	})
+}
+
+// healthHandler returns OK for health checks
+func healthHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("OK"))
 }
 
 func serveTemplate(w http.ResponseWriter, r *http.Request) {
