@@ -19,9 +19,6 @@ go run server.go
 # Run with Docker Compose (port 8080)
 docker compose up --build
 
-# Build Docker image (tagged with git commit hash)
-make build-docker
-
 # Deploy to production
 fly deploy
 ```
