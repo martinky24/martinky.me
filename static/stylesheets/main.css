@@ -3,6 +3,10 @@ body {
 	font-family: 'EB Garamond', serif;
 }
 
+a {
+	text-decoration: none;
+}
+
 .nameplate {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 24px;
